@@ -77,4 +77,13 @@ public class BasePage {
 		}
 	}
 	
+	public boolean isElementPresent(WebDriver driver,WebElement element) {
+		try {
+			fluentWait(driver, element);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+	
 }
