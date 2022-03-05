@@ -27,6 +27,7 @@ public class Dashboard extends BasePage {
 	{
 		setElement(driver, textbox_search, text);
 		clickOnElement(driver, button_searchGo);
+		
 	}
 
 }
