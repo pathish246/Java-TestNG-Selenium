@@ -1,35 +1,38 @@
 package com.target.tests;
 
+import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.target.common.Driver;
+import com.target.dataprovider.SearchData;
 import com.target.pages.Dashboard;
-
 
 public class Search extends Driver {
 
+	public Search() {
+		
+	}
+	
 	WebDriver driver;
 	
 	@BeforeTest
 	public void InitiateBrowser() {
 		driver = openBrowser(driver,"CHROME");
 	}
-	
-	@Test
-	public void search() {
+
+	@Test(dataProvider="readExcel",dataProviderClass =SearchData.class)
+	public void search(HashMap<String, String> map) {
 		
-		navigateToURL(driver, "PROD");
+	navigateToURL(driver, "PROD");
 		
 		Dashboard db = new Dashboard(driver);
-		db.search("Shoe");
+		db.search(map.get("Search"));
 	}
 	
 	@AfterTest
 	public void disposeInstance() {
 		driver.quit();
 	}
-	
 }
