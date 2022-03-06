@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.target.common.Driver;
 import com.target.pages.Dashboard;
 
+
 public class Search extends Driver {
 
 	WebDriver driver;
@@ -28,7 +29,7 @@ public class Search extends Driver {
 	
 	@AfterTest
 	public void disposeInstance() {
-	//	driver.quit();
+		driver.quit();
 	}
 	
 }
