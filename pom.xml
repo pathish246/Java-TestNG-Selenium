@@ -13,7 +13,12 @@
 	<properties>
 		<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
+
+
 	</properties>
+
 
 	<dependencies>
 
@@ -23,11 +28,13 @@
 			<version>6.1.1</version>
 		</dependency>
 		<!-- Adding Selenium dependency -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>2.47.1</version>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.1.2</version>
 		</dependency>
+
 
 	</dependencies>
 
@@ -41,9 +48,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.0</version>
 				<configuration>
-					<compilerVersion>3.6</compilerVersion>
-					<source>3.6</source>
-					<target>3.6</target>
+					<compilerVersion>1.8</compilerVersion>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 
