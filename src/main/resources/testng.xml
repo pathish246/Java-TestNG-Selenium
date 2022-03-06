@@ -3,7 +3,7 @@
 <suite name="Practice Suite">
   <test name="Test Basics 1">
       <classes>
-      <class name="com.target.tests.Search"/>
+      <class name="com.target.tests.Search.java"/>
       </classes>
   </test> <!-- Test --> 
 </suite> <!-- Suite -->
