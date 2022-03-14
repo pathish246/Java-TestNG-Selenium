@@ -1,15 +1,19 @@
 package com.target.common;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Driver {
 
-	public WebDriver openBrowser(WebDriver driver, String browserName) {
+	public WebDriver openBrowser(WebDriver driver, String browserName) throws MalformedURLException {
 		switch (browserName.toUpperCase()) {
 		case "CHROME": {
-			System.setProperty("webdriver.chrome.driver", "/Users/boney/Downloads/chromedriver");
-			driver = new ChromeDriver();
+			
+			
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/"),new ChromeOptions());
 			driver.manage().window().maximize();
 			break;
 		}

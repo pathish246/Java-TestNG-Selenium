@@ -1,5 +1,6 @@
 package com.target.tests;
 
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -18,7 +19,7 @@ public class Search extends Driver {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void InitiateBrowser() {
+	public void InitiateBrowser() throws MalformedURLException {
 		driver = openBrowser(driver,"CHROME");
 	}
 
